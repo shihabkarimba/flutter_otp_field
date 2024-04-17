@@ -11,9 +11,9 @@ class FlutterOTPField extends StatefulWidget {
   final Function(String)? onChanged;
   final ButtonStyle? overlayButtonStyle;
   final TextStyle? overlayTextStyle;
-  final Color? backroundColor;
+  final Color? backgroundColor;
   final TextStyle? textStyle;
-  final double hieght;
+  final double height;
   final Color? borderColor;
   final Color? focusedBgColor;
   final BoxBorder? focusedBorderStyle;
@@ -29,7 +29,7 @@ class FlutterOTPField extends StatefulWidget {
     super.key,
     this.overlayButtonStyle,
     this.overlayTextStyle,
-    this.hieght = 55,
+    this.height = 55,
     this.textStyle,
     this.focusedBgColor,
     this.focusedBorderStyle,
@@ -37,7 +37,7 @@ class FlutterOTPField extends StatefulWidget {
     this.unfocusedBorderStyle,
     this.keyboardType,
     this.formattes,
-    this.backroundColor,
+    this.backgroundColor,
     this.indicatorColor,
     this.borderColor,
     this.borderWidth = 1,
@@ -99,9 +99,7 @@ class _FlutterOTPFieldState extends State<FlutterOTPField>
       },
     );
     formatters = [
-      ...widget.formattes ??
-          [
-          ],
+      ...widget.formattes ?? [],
       FilteringTextInputFormatter.allow(RegExp("[0-9a-zA-Z]")),
       LengthLimitingTextInputFormatter(widget.length),
     ];
@@ -133,16 +131,17 @@ class _FlutterOTPFieldState extends State<FlutterOTPField>
               child: Align(
                 alignment: AlignmentDirectional.topStart,
                 child: ElevatedButton(
-                  style: widget.overlayButtonStyle ?? ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    surfaceTintColor: Colors.transparent,
-                    foregroundColor: Colors.black,
-                    shadowColor: Colors.black38,
-                    visualDensity: const VisualDensity(
-                      horizontal: -4,
-                      vertical: -1,
-                    ),
-                  ),
+                  style: widget.overlayButtonStyle ??
+                      ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        surfaceTintColor: Colors.transparent,
+                        foregroundColor: Colors.black,
+                        shadowColor: Colors.black38,
+                        visualDensity: const VisualDensity(
+                          horizontal: -4,
+                          vertical: -1,
+                        ),
+                      ),
                   onPressed: () async {
                     final clipboard =
                         await Clipboard.getData(Clipboard.kTextPlain);
@@ -164,7 +163,8 @@ class _FlutterOTPFieldState extends State<FlutterOTPField>
                     focus.unfocus();
                   },
                   child: Text(
-                    'Paste', style: widget.overlayTextStyle ?? const TextStyle(),
+                    'Paste',
+                    style: widget.overlayTextStyle ?? const TextStyle(),
                   ),
                 ),
               ),
@@ -173,7 +173,7 @@ class _FlutterOTPFieldState extends State<FlutterOTPField>
           child: Stack(
             children: [
               SizedBox(
-                height: widget.hieght + 35,
+                height: widget.height + 35,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -200,11 +200,13 @@ class _FlutterOTPFieldState extends State<FlutterOTPField>
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 5),
                               child: Container(
-                                height: widget.hieght,
+                                height: widget.height,
                                 decoration: BoxDecoration(
                                   color: isFieldSame
                                       ? widget.focusedBgColor
-                                      : widget.unfocusedColor ?? widget.backroundColor ?? Colors.white,
+                                      : widget.unfocusedColor ??
+                                          widget.backgroundColor ??
+                                          Colors.white,
                                   borderRadius: BorderRadius.circular(
                                       widget.borderRadius),
                                   border: isFieldSame
