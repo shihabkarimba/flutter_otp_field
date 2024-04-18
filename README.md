@@ -14,7 +14,7 @@ To use Flutter OTP Field in your Flutter project, follow these steps:
 
 ```dart
 dependencies:
-  flutter_otp_field: ^1.0.0
+  otp_field_flutter: ^1.0.0
 ```
 2. Run `flutter pub get` to install the package.
 
@@ -23,7 +23,7 @@ To use the Flutter OTP Field widget in your Flutter application, import the pack
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:flutter_otp_field/flutter_otp_field.dart';
+import 'package:otp_field_flutter/otp_field_flutter.dart';
 
 class MyOTPPage extends StatelessWidget {
   @override
@@ -67,7 +67,7 @@ This package is licensed under the [MIT](https://choosealicense.com/licenses/mit
 Flutter OTP Field is developed and maintained by [shihabkarimba](https://github.com/shihabkarimba).
 
 ## Resources
-- [Github Repository](https://github.com/shihabkarimba/flutter_otp_field)
+- [Github Repository](https://github.com/shihabkarimba/otp_field_flutter)
 - [Pub.dev]()
 
 ## Version History

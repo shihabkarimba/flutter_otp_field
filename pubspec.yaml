@@ -1,7 +1,7 @@
-name: flutter_otp_field
+name: otp_field_flutter
 description: "Flutter package with customized otp text field"
 version: 0.0.1
-homepage: https://github.com/shihabkarimba/flutter_otp_field
+homepage: https://github.com/shihabkarimba/otp_field_flutter
 
 environment:
   sdk: '>=3.3.3 <4.0.0'

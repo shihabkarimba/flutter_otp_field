@@ -1,4 +1,4 @@
-library flutter_otp_field;
+library otp_field_flutter;
 
 import 'dart:async';
 
@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 /// A widget for entering OTP (One-Time password)
-class FlutterOTPField extends StatefulWidget {
+class OTPFieldFlutter extends StatefulWidget {
   final Function(String)? onCompleted;
   final Function(String)? onChanged;
   final ButtonStyle? overlayButtonStyle;
@@ -25,7 +25,7 @@ class FlutterOTPField extends StatefulWidget {
   final TextInputType? keyboardType;
   final List<TextInputFormatter>? formattes;
   final int length;
-  const FlutterOTPField({
+  const OTPFieldFlutter({
     super.key,
     this.overlayButtonStyle,
     this.overlayTextStyle,
@@ -48,10 +48,10 @@ class FlutterOTPField extends StatefulWidget {
   });
 
   @override
-  State<FlutterOTPField> createState() => _FlutterOTPFieldState();
+  State<OTPFieldFlutter> createState() => _OTPFieldFlutterState();
 }
 
-class _FlutterOTPFieldState extends State<FlutterOTPField>
+class _OTPFieldFlutterState extends State<OTPFieldFlutter>
     with TickerProviderStateMixin {
   bool isFocused = false;
   late FocusNode focus;
