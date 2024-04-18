@@ -1,3 +1,4 @@
+![](/Users/thinkjsmac/Practice/flutter/otp_field_flutter/Assets/Images/img1.jpg)
 
 Flutter OTP Field is a Flutter package that provides a customizable widget for entering OTP (One-Time Password) in Flutter applications. It allows users to easily input OTP codes with various customization options like background color, border styles, text styles, and more.
 
