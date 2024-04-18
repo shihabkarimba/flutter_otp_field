@@ -203,20 +203,27 @@ class _OTPFieldFlutterState extends State<OTPFieldFlutter>
                                 height: widget.height,
                                 decoration: BoxDecoration(
                                   color: isFieldSame
-                                      ? widget.focusedBgColor
+                                      ? widget.focusedBgColor ??
+                                          widget.backgroundColor ??
+                                          Colors.white
                                       : widget.unfocusedColor ??
                                           widget.backgroundColor ??
                                           Colors.white,
                                   borderRadius: BorderRadius.circular(
                                       widget.borderRadius),
                                   border: isFieldSame
-                                      ? widget.focusedBorderStyle
-                                      : widget.unfocusedBorderStyle ??
+                                      ? widget.focusedBorderStyle ??
+                                          widget.unfocusedBorderStyle ??
                                           Border.all(
                                             color: widget.borderColor ??
                                                 Colors.black12,
                                             width: widget.borderWidth,
-                                          ),
+                                          )
+                                      : Border.all(
+                                          color: widget.borderColor ??
+                                              Colors.black12,
+                                          width: widget.borderWidth,
+                                        ),
                                 ),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
