@@ -71,4 +71,4 @@ Flutter OTP Field is developed and maintained by [shihabkarimba](https://github.
 - [Pub.dev]()
 
 ## Version History
-- `1.0.0`: Initial release.
+- `0.0.1`: Initial release.
